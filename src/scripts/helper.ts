@@ -20,4 +20,7 @@ export class Helper{
     static getAddedaddedFieldsList(){
         return $("#addedFieldsList");
     }
+    static getRemoveIcon(){
+        return $(".js-remove-field");
+    }
 }

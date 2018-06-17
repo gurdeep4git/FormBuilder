@@ -9,9 +9,13 @@ const distPath = path.resolve(__dirname, 'dist');
 const config = {
   entry: {
       "dashboard":"./src/scripts/dashboard.ts",
+      "layout":"./src/scripts/layout.ts"
   },
   devtool: 'inline-source-map',
   resolve: {
+    alias:{
+      handlebars : 'handlebars/dist/handlebars.js'
+    },
     extensions: [ '.tsx', '.ts', '.js' ]
   },
   output: {
@@ -24,6 +28,17 @@ const config = {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules/
+      },
+      {
+        test:'/\.hbs$/',
+        use:[
+          {
+            loader:'handlebars-loader',
+            options:{
+              helperDirs:"./src/scripts/handlebars"
+            }
+          }
+        ]
       },
       {
         test: /\.(css|scss)$/,

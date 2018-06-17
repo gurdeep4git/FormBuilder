@@ -1,17 +1,17 @@
-class FormValue{
+export class FormValue{
     title:string;
     layout:string;
+    FieldsList:any[]
 }
 
-export let formValue = new FormValue();
+new FormValue();
 
-class FieldValue{
+export class FieldValue{
     id:number;
     title:string;
     type:string;
 }
-
-export let fieldValue = new FieldValue();
+new FieldValue();
 
 export enum FieldTypes{
     text = "text",
