@@ -1,2 +1,8 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~font-awesome/css/font-awesome.min.css";
+
+.err-msg{
+    color: red;
+    font-size:12px;
+    display: none;
+}

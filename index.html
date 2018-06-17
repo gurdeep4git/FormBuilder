@@ -11,7 +11,7 @@
     </head>
     <body>
         <div class="wrapper">
-            <div class="container">
+            <div class="container py-4">
                 <div class="p-3 mb-2 bg-secondary text-white">
                     <h3>Form builder</h3>
                     <p>Create custom form by choosing fields</p>
@@ -23,6 +23,7 @@
                             <div class="form-group">
                                 <label for="formTitle">Title</label>
                                 <input type="text" name="formTitle" id="formTitle" class="form-control">
+                                <span class="err-msg" id="error-formTitle">Form Title is required.</span>
                             </div>
                             <div class="form-group">
                                 <p class="mb-1">Layout</p>
@@ -34,6 +35,7 @@
                                     <input type="radio" id="twoCol" name="formLayout" value="twoCol" class="custom-control-input">
                                     <label class="custom-control-label" for="twoCol">Two Column</label>
                                 </div>
+                                <span class="err-msg" id="error-formLayout">Please select form layout.</span>
                             </div>
                         </div>
                     </div>
@@ -44,12 +46,14 @@
                             <div class="form-group">
                                 <label for="FieldTitle">Enter Title</label>
                                 <input type="text" name="FieldTitle" id="FieldTitle" class="form-control">
+                                <span class="err-msg" id="error-FieldTitle">Field title is required.</span>
                             </div>
                             <div class="form-group">
                                 <label for="FieldType">Enter Type</label>
                                 <select id="FieldType" class="form-control"></select>
                             </div>
                             <button type="button" class="btn btn-info" id="addMoreField">Add more field</button>
+                            <span class="err-msg">Please select atleast one form field.</span>
                             <div id="selectedFields" class="d-none">
                                 <p class="mb-0 mt-2"><b>Fields Added:</b></p>
                                 <ul id="addedFieldsList" class="list-group"></ul>
