@@ -1,5 +1,5 @@
 import "../sass/main.scss";
-
+import { FormLayoutType } from './form-value';
 //import * as OneColumnLayout from "./handlebars/oneColumn.hbs";
 
 export class Layout{
@@ -18,7 +18,7 @@ export class Layout{
     }
 
     private createForm(data:any){
-        if(data.layout == "oneCol"){
+        if(data.layout == FormLayoutType.oneCol){
             this.generateOneCol(data);
         }
         else{
@@ -27,7 +27,6 @@ export class Layout{
     }
 
     private generateOneCol(data:any){
-        //$('').html(OneColumnLayout(data));
         let formHTML = `
         <form>
             <h3>${data.title}</h3>

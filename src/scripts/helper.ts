@@ -23,4 +23,32 @@ export class Helper{
     static getRemoveIcon(){
         return $(".js-remove-field");
     }
+    static getFieldTypeDropdown(){
+        return $("#FieldType");
+    }
+    static getCheckFieldsArea(){
+        return $("#checkFields");
+    }
+    static getOptionCount(){
+        return $("#optionCount");
+    }
+    static getOptionText(){
+        return $("#optionText");
+    }
+    static getOptionValue(){
+        return $("#optionValue");
+    }
+    static getAddOptionBtn(){
+        return $("#addOptionBtn");
+    }
+    static getAddOptionList(){
+        return $("#addedOptionsList");
+    }
+    static getSelectedOptions(){
+        return $("#selectedOptions");
+    }
+    static getInnerCheckFields(){
+        return $("#innerCheckFields");
+    }
+    
 }

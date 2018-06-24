@@ -1,6 +1,6 @@
 export class FormValue{
     title:string;
-    layout:string;
+    layout:number;
     FieldsList:any[]
 }
 
@@ -10,8 +10,26 @@ export class FieldValue{
     id:number;
     title:string;
     type:string;
+    Options?:CheckFields[]
 }
 new FieldValue();
+
+export class CheckFields{
+    count:number;
+    OptionsList:CheckFieldsOptionsList[]
+}
+new CheckFields();
+
+export class CheckFieldsOptionsList{
+    title:string;
+    value:any;
+}
+new CheckFieldsOptionsList();
+
+export enum FormLayoutType{
+    oneCol = 1,
+    twoCol = 2
+}
 
 export enum FieldTypes{
     text = "text",

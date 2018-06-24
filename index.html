@@ -28,11 +28,11 @@
                             <div class="form-group">
                                 <p class="mb-1">Layout</p>
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="oneCol" name="formLayout" value="oneCol" class="custom-control-input">
+                                    <input type="radio" id="oneCol" name="formLayout" value="1" class="custom-control-input">
                                     <label class="custom-control-label" for="oneCol">One Column</label>
                                 </div>
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="twoCol" name="formLayout" value="twoCol" class="custom-control-input">
+                                    <input type="radio" id="twoCol" name="formLayout" value="2" class="custom-control-input">
                                     <label class="custom-control-label" for="twoCol">Two Column</label>
                                 </div>
                                 <span class="err-msg" id="error-formLayout">Please select form layout.</span>
@@ -52,6 +52,31 @@
                                 <label for="FieldType">Enter Type</label>
                                 <select id="FieldType" class="form-control"></select>
                             </div>
+
+                            <div id="checkFields" class="d-none card card-body mb-4">
+                                <div class="form-group">
+                                    <label for="OptionCount">Number of options</label>
+                                    <input type="text" class="form-control" id="optionCount" />
+                                </div>
+                                <div class="d-none" id="innerCheckFields">
+                                    <div class="form-group">
+                                        <label for="optionText">Text for option</label>
+                                        <input type="text" class="form-control" id="optionText" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="optionValue">Value for option</label>
+                                        <input type="text" class="form-control" id="optionValue" />
+                                    </div>
+                                    <div class="text-right">
+                                        <button type="button" class="btn btn-success" id="addOptionBtn">Add option</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="selectedOptions" class="d-none">
+                                <p class="mb-0 mt-2"><b>Options Added:</b></p>
+                                <ul id="addedOptionsList" class="list-group"></ul>
+                            </div>
+                            <hr>
                             <button type="button" class="btn btn-info" id="addMoreField">Add more field</button>
                             <span class="err-msg">Please select atleast one form field.</span>
                             <div id="selectedFields" class="d-none">
